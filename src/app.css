@@ -1,0 +1,88 @@
+body {
+  margin: 0px;
+  background-color: #32353d;
+  font-family: 'Lora', serif;
+  color: white;
+}
+
+.content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.banner {
+  aspect-ratio: 4/1;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 35%, rgba(0,0,0,0.5) 100%);
+}
+
+.title {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.title > h1 {
+  margin: 0;
+  font-size: 6em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .title > h1 {
+    font-size: 8vw;
+  }
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  border-color: white;
+  border-width: 2px;
+  border-style: none none solid none;
+}
+
+.navlink {
+  position: relative;
+  font-weight: bold;
+}
+
+.navlink > a {
+  padding: 10px;
+}
+
+.line {
+  width: 0%;
+  margin: 3px auto;
+  height: 3px;
+  bottom: -3px;
+  background-color: white;
+  transition: all ease-out 0.2s;
+}
+
+.navlink:hover > .line {
+  width: calc(100% - 20px);
+}
+
+a {
+  text-decoration: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
