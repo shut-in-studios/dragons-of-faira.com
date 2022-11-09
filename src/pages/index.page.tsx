@@ -1,12 +1,7 @@
 import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import "./index.css";
 import background from "../assets/Imposing_Radellia_finished.webp";
-import {
-  dangerouslySkipEscape,
-  escapeInject,
-  PageContextBuiltIn,
-} from "vite-plugin-ssr";
-import { render as renderToString } from "preact-render-to-string";
+import { Helmet } from "react-helmet";
 
 function NavLink(props: { label: string; href: string }): JSX.Element {
   return (
@@ -20,6 +15,15 @@ function NavLink(props: { label: string; href: string }): JSX.Element {
 export function Page() {
   return (
     <ParallaxProvider>
+      <Helmet>
+        <meta charSet="UTF-8" />
+        <title>Dragons of Faira</title>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora:regular,medium,semibold,bold"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
       <ParallaxBanner
         layers={[{ image: background, speed: -50 }]}
         className="banner"
@@ -80,13 +84,4 @@ export function Page() {
       </div>
     </ParallaxProvider>
   );
-}
-
-export async function render(pageContext: PageContextBuiltIn) {
-  return {
-    // documentHtml: escapeInject`<html>${renderToString(
-    //   pageContext.Page()
-    // )}</html>`,
-    documentHtml: dangerouslySkipEscape(renderToString(pageContext.Page())),
-  };
 }
