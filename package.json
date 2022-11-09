@@ -15,9 +15,11 @@
     "@types/react": "^17.0.0",
     "babel-plugin-transform-hook-names": "^1.0.2",
     "preact": "^10.11.2",
+    "preact-render-to-string": "^5.2.6",
     "react-scroll-parallax": "^3.3.1",
     "typescript": "^4.8.4",
-    "vite": "^3.2.2"
+    "vite": "^3.2.2",
+    "vite-plugin-ssr": "^0.4.44"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx-development": "^7.18.6",

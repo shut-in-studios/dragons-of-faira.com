@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 35%, rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .title {
@@ -34,13 +34,13 @@ body {
   padding-top: 25px;
 }
 
-.title > h1 {
+.title>h1 {
   margin: 0;
   font-size: 6em;
 }
 
 @media only screen and (max-width: 1200px) {
-  .title > h1 {
+  .title>h1 {
     font-size: 8vw;
   }
 }
@@ -61,7 +61,7 @@ body {
   font-weight: bold;
 }
 
-.navlink > a {
+.navlink>a {
   padding: 10px;
 }
 
@@ -74,7 +74,7 @@ body {
   transition: all ease-out 0.2s;
 }
 
-.navlink:hover > .line {
+.navlink:hover>.line {
   width: calc(100% - 20px);
 }
 
